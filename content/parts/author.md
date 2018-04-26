@@ -2,4 +2,4 @@
 title: author
 ---
 
-**Mr. Gatsby** Proin ornare ligula eu tellus tempus elementum. Aenean [bibendum](/) iaculis mi, nec blandit lacus interdum vitae. Vestibulum non nibh risus, a scelerisque purus. :hearts:
+**Mr. Suyog** is a experienced fullstack developer with a strong appreciation for good UX and love to face challenges specially offered from new technology and environment.
