@@ -4,8 +4,7 @@ import injectSheet from "react-jss";
 import Button from "material-ui/Button";
 import { navigateTo } from "gatsby-link";
 import { TextValidator, ValidatorForm } from "react-material-ui-form-validator";
-
-var mailgun = require("mailgun.js");
+import mailgun from "mailgun.js";
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
