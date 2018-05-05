@@ -4,7 +4,7 @@ import injectSheet from "react-jss";
 import Button from "material-ui/Button";
 import { navigateTo } from "gatsby-link";
 import { TextValidator, ValidatorForm } from "react-material-ui-form-validator";
-import mailgun from "mailgun.js";
+// import mailgun from "mailgun.js";
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -59,26 +59,28 @@ class ContactForm extends React.Component {
   };
 
   handleSubmit = e => {
-    var mg = mailgun.client({
-      username: "api",
-      key: process.env.MAILGUN_API_KEY || "key-15888accfa83e717cb2d907a8ac291bf"
-    });
-    mg.messages
-      .create("https://api.mailgun.net/v3/sandbox36f35c615b9e4d8db5d103c09d1b46c3.mailgun.org", {
-        from: `${this.name} <${this.email}>`,
-        to: ["suyogkrazz@gmail.com"],
-        subject: "Hello",
-        text: this.message,
-        html: "<h1>Hi!</h1>"
-      })
-      .then(msg => {
-        console.log(msg);
-        navigateTo("/success");
-      }) // logs response data
-      .catch(err => {
-        console.log(err);
-        this.handleNetworkError();
-      }); // logs any error
+    // var mg = mailgun.client({
+    //   username: process.env.MAILGUN_USERNAME,
+    //   key: process.env.MAILGUN_API_KEY
+    // });
+    // mg.messages
+    //   .create("https://api.mailgun.net/v3/sandbox36f35c615b9e4d8db5d103c09d1b46c3.mailgun.org", {
+    //     from: `${this.name} <${this.email}>`,
+    //     to: ["suyogkrazz@gmail.com"],
+    //     subject: "Hello",
+    //     text: this.message,
+    //     html: "<h1>Hi!</h1>"
+    //   })
+    //   .then(msg => {
+    //     console.log(msg);
+    //     navigateTo("/success");
+    //   }) // logs response data
+    //   .catch(err => {
+    //     console.log(err);
+    //     this.handleNetworkError();
+    //   }); // logs any error
+
+    this.handleNetworkError();
 
     e.preventDefault();
   };

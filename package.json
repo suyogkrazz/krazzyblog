@@ -35,6 +35,7 @@
     "webpack-bundle-analyzer": "^2.10.0"
   },
   "dependencies": {
+    "@sendgrid/mail": "^6.2.1",
     "color": "^3.0.0",
     "gatsby": "^1.9.244",
     "gatsby-image": "^1.0.42",
