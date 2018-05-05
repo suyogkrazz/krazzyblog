@@ -1,10 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import Card, { CardContent } from "material-ui/Card";
+
+import Typography from "material-ui/Typography";
+
 import Article from "../Main/Article";
 import PageHeader from "./PageHeader";
 import Content from "../Main/Content";
-import { BarChart, XAxis, Tooltip, Legend, YAxis, CartesianGrid, Bar } from "recharts";
+import {
+  BarChart,
+  XAxis,
+  Tooltip,
+  Legend,
+  YAxis,
+  CartesianGrid,
+  Bar,
+  ResponsiveContainer
+} from "recharts";
 
 const Page = props => {
   const { page } = props;
@@ -23,21 +36,25 @@ const Page = props => {
       <PageHeader {...page.frontmatter} />
       <Content html={html} />
       {page.frontmatter.title == "About" && (
-        <div>
-          <h3>My Skills</h3>
-          <BarChart
-            width={600}
-            height={300}
-            data={data}
-            margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <Legend />
-            <Tooltip />
-            <Bar dataKey="percent" fill="#8884d8" />
-          </BarChart>
-        </div>
+        <Card>
+          <Typography variant="display1" color="secondary" align="center">
+            My Skills
+          </Typography>
+          <CardContent>
+            <BarChart
+              width={600}
+              height={300}
+              data={data}
+              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <Legend />
+              <Tooltip />
+              <Bar dataKey="percent" fill="#8884d8" />
+            </BarChart>
+          </CardContent>
+        </Card>
       )}
     </Article>
   );
