@@ -40,9 +40,12 @@ module.exports = class HTML extends React.Component {
           <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png" />
         </head>
-        <Helmet>
+        {/* <Helmet>
           <script src="//j.wovn.io/1" data-wovnio="key=dpwTl-" async />
-        </Helmet>
+        </Helmet> */}
+        <Helmet
+          script={[{ src: "//j.wovn.io/1", type: "text/javascript", "data-wovnio": "key=dpwTl-" }]}
+        />
         <body {...this.props.bodyAttributes}>
           <noscript>You need to enable JavaScript to run this app!</noscript>
           {this.props.preBodyComponents}
