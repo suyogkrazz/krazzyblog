@@ -19,6 +19,9 @@ module.exports = class HTML extends React.Component {
     return (
       <html {...this.props.htmlAttributes}>
         <head>
+          <Helmet>
+            <script src="//j.wovn.io/1" data-wovnio="key=dpwTl-" async />
+          </Helmet>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -40,9 +43,7 @@ module.exports = class HTML extends React.Component {
           <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png" />
         </head>
-        <Helmet>
-          <script src="//j.wovn.io/1" data-wovnio="key=dpwTl-" async />
-        </Helmet>
+
         {/* <Helmet
           script={[{ src: "//j.wovn.io/1", type: "text/javascript", "data-wovnio": "key=dpwTl-" }]}
         /> */}
