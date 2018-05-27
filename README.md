@@ -1,6 +1,6 @@
 # PersonalBlog starter for Gatsby
 
-[DEMO website](suyogkc.com.np)
+[DEMO website](http://suyogkc.com.np)
 
 More details soon. For now a couple of annotations.
 
