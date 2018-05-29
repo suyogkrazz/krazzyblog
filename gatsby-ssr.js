@@ -32,21 +32,6 @@ exports.replaceRenderer = ({ bodyComponent, replaceBodyHTMLString, setHeadCompon
   );
 
   setHeadComponents([
-    <script
-      key={`wovn-setup`}
-      dangerouslySetInnerHTML={{
-        __html: `
-      (function(d) {
-          var wf = d.createElement('script'), s = d.scripts[0];
-          wf.src = '//j.wovn.io/1';
-          wf.async = true;
-          wf.dataset={
-            wovnio:'key=dpwTl-'
-          }
-          s.parentNode.insertBefore(wf, s);
-      })(document);`
-      }}
-    />,
     <style
       type="text/css"
       id="server-side-jss"
@@ -57,23 +42,7 @@ exports.replaceRenderer = ({ bodyComponent, replaceBodyHTMLString, setHeadCompon
 };
 
 exports.onRenderBody = ({ setHeadComponents }) => {
-  return setHeadComponents([
-    <script
-      key={`wovn-setup`}
-      dangerouslySetInnerHTML={{
-        __html: `
-    (function(d) {
-        var wf = d.createElement('script'), s = d.scripts[0];
-        wf.src = '//j.wovn.io/1';
-        wf.async = true;
-        wf.dataset={
-          wovnio:'key=dpwTl-'
-        }
-        s.parentNode.insertBefore(wf, s);
-    })(document);`
-      }}
-    />
-  ]);
+  return setHeadComponents([]);
 };
 
 exports.onRenderBody = ({ setPostBodyComponents }) => {
