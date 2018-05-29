@@ -20,7 +20,7 @@ module.exports = class HTML extends React.Component {
       <html {...this.props.htmlAttributes}>
         <head>
           <Helmet>
-            <script src="//j.wovn.io/1" data-wovnio="key=dpwTl-" async />
+            <script data-react-helmet="true" src="//j.wovn.io/1" data-wovnio="key=dpwTl-" async />
           </Helmet>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
