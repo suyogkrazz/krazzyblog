@@ -3,10 +3,6 @@ title: My Works
 menuTitle: My Works
 ---
 
-### [Homnia](https://homnia.fi/)
-
-Find real estate in Finland
-
 ### [ShiftCare](https://shiftcare.com/)
 
 ShiftCare software makes it a breeze to manage rosters, notify staff, run timesheets and manage smart attendance. Made with love in react native
@@ -17,6 +13,6 @@ ShiftCare software makes it a breeze to manage rosters, notify staff, run timesh
 
 Australia’s fastest growing construction network
 
-### [Jukson](http://jukson.com/)
+### [Homnia]
 
-Famous Magazine site of Pokhara
+Find real estate in Finland
