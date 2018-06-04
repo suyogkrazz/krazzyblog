@@ -13,6 +13,6 @@ ShiftCare software makes it a breeze to manage rosters, notify staff, run timesh
 
 Australia’s fastest growing construction network
 
-### [Homnia]
+### Homnia
 
 Find real estate in Finland
