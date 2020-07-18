@@ -7,9 +7,9 @@ import Main from "../components/Main";
 import Article from "../components/Main/Article";
 import PageHeader from "../components/Page/PageHeader";
 import Content from "../components/Main/Content";
-import Form from "../components/ContactForm";
 
-const styles = theme => ({});
+import avatar from "../images/jpg/avatar.jpg";
+const styles = (theme) => ({});
 
 const Contact = () => {
   return (
@@ -20,14 +20,14 @@ const Contact = () => {
           Feel free to contact me by email: <Obfuscate email="suyogkrazz@gmail.com" /> or use the
           form below.
         </Content>
-        <Form />
+        <img src={avatar} style={{ padding: "30px", width: "100%", height: "auto" }} />
       </Article>
     </Main>
   );
 };
 
 Contact.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
 };
 
 export default injectSheet(styles)(Contact);
